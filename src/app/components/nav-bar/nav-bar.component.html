@@ -1,0 +1,45 @@
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="../../assets/images/finalProject assets/freshcart-logo.svg" class="ms-5">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-3">
+              <li *ngIf="isLogin" class="nav-item">
+                <a class="nav-link active text-dark shope font-md" routerLink="home">Home</a>
+              </li> 
+              <li *ngIf="isLogin" class="nav-item">
+                <a class="nav-link text-dark shope font-md" routerLink="products">Products</a>
+              </li>
+              <li *ngIf="isLogin" class="nav-item">
+                <a class="nav-link text-dark shope font-md" routerLink="categories">Categories</a>
+              </li>
+              <!-- <li *ngIf="isLogin" class="nav-item">
+                <a class="nav-link text-dark shope font-md" routerLink="brands">Brands</a>
+              </li> -->
+
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              <li class="nav-item d-flex align-items-center">
+                <i class="fab mx-2 fa-instagram"></i>
+                <i class="fab mx-2 fa-facebook"></i>
+                <i class="fab mx-2 fa-tiktok"></i>
+                <i class="fab mx-2 fa-twitter"></i>
+                <i class="fab mx-2 fa-linkedin"></i>
+                <i class="fab mx-2 fa-youtube"></i>
+              </li>
+              <li *ngIf="!isLogin" class="nav-item">
+                <a class="nav-link active text-dark shope font-md" routerLink="login">Login</a>
+              </li>
+              <li *ngIf="!isLogin" class="nav-item">
+                <a class="nav-link text-dark shope font-md" routerLink="register">Register</a>
+              </li>
+              <li *ngIf="isLogin" class="nav-item">
+                <span (click)="logOut()" class="nav-link cursor-pointer text-dark shope font-md" >LogOut</span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
